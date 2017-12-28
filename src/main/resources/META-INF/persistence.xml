@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://xmlns.jcp.org/xml/ns/persistence
+        http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+	<persistence-unit name="urudb">
+	<!-- 	<jta-data-source>java:jboss/datasources/optiuru</jta-data-source> -->
+		<class>com.bntm.app.entity.Billingconfiguration</class>
+		<class>com.bntm.app.entity.Client</class>
+		<class>com.bntm.app.entity.Merchantmodulemapping</class>
+		<class>com.bntm.app.entity.Merchant</class>
+		<class>com.bntm.app.entity.Module</class>
+		<class>com.bntm.app.entity.Package</class>
+		<class>com.bntm.app.entity.Paymenthistory</class>
+		<class>com.bntm.app.entity.Timesheet</class>
+		<class>com.bntm.app.entity.Timesheetconfiguration</class>			
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" /> -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.show_sql" value="true" />
+			<!-- <property name="hibernate.transaction.manager_lookup_class"
+ 			value="com.atomikos.icatch.jta.hibernate3.TransactionManagerLookup" /> 
+ 			<property name="hibernate.transaction.factory_class"
+ 			value="org.hibernate.transaction.CMTTransactionFactory" /> -->
+ 			<!-- <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JOTMJtaPlatform"/> -->
+			<!-- <property name="hibernate.archive.autodetection" value="class" /> -->
+		</properties>
+	</persistence-unit>  
+
+</persistence>
